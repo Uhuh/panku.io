@@ -3,40 +3,40 @@ $sides: 'top', 'right', 'bottom', 'left';
 
 @each $space in $spaces {
   .m-#{$space} {
-    margin: #{$space/4}rem;
+    margin: #{calc($space/4)}rem;
   }
 
   .mx-#{$space} {
-    margin-left: #{$space/4}rem;
-    margin-right: #{$space/4}rem;
+    margin-left: #{calc($space/4)}rem;
+    margin-right: #{calc($space/4)}rem;
   }
 
   .my-#{$space} {
-    margin-top: #{$space/4}rem;
-    margin-bottom: #{$space/4}rem;
+    margin-top: #{calc($space/4)}rem;
+    margin-bottom: #{calc($space/4)}rem;
   }
 
   .px-#{$space} {
-    padding-left: #{$space/4}rem;
-    padding-right: #{$space/4}rem;
+    padding-left: #{calc($space/4)}rem;
+    padding-right: #{calc($space/4)}rem;
   }
 
   .py-#{$space} {
-    padding-top: #{$space/4}rem;
-    padding-bottom: #{$space/4}rem;
+    padding-top: #{calc($space/4)}rem;
+    padding-bottom: #{calc($space/4)}rem;
   }
 
   .p-#{$space} {
-    padding: #{$space/4}rem;
+    padding: #{calc($space/4)}rem;
   }
 
   @each $side in $sides {
     .m#{str-slice($side, 0, 1)}-#{$space} {
-      margin-#{$side}: #{$space/4}rem;
+      margin-#{$side}: #{calc($space/4)}rem;
     }
 
     .p#{str-slice($side, 0, 1)}-#{$space} {
-      padding-#{$side}: #{$space/4}rem;
+      padding-#{$side}: #{calc($space/4)}rem;
     }
   }
 }
