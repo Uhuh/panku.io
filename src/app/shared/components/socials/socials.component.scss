@@ -1,0 +1,13 @@
+.gap {
+  gap: 20px;
+}
+
+svg {
+  height: 32px;
+  width: 32px;
+  fill: var(--grey);
+  transition: all 0.2s;
+  &:hover {
+    fill: var(--faded);
+  }
+}

@@ -1,1 +1,96 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700&display=swap');
+@import './utils/spacings';
+
+:root {
+  --bg-color: #0D0630;
+  --main-text-color: #FFF2FF;
+  --grey: #fff2ffc7;
+  --faded: #fff2ff75;
+  --blush: #EE8190;
+  --blue: #A8E0FF;
+  --purple: #9046CF;
+  --pink: #CC59D2;
+
+  font-size: 32px;
+  font-family: 'Inconsolata', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  color: var(--main-text-color);
+  background-color: var(--bg-color);
+}
+
+$colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey';
+
+@each $color in $colors {
+  .#{$color}-text {
+    color: var(--#{$color});
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-col-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.my-auto {
+  margin: 0 auto;
+}
+
+.mx-auto {
+  margin: auto 0;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.logo {
+  height: 75px;
+  width: 75px;
+}

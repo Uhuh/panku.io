@@ -1,0 +1,17 @@
+:host {
+  z-index: 10;
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    position: unset;
+  }
+}
+img {
+  transition: all 0.2s;
+}
+img:hover {
+  transform: scale(1.1);
+}
