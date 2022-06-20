@@ -1,1 +1,15 @@
-<p>cat works!</p>
+<div class="flex justify-center">
+  <div class="flex column p-2 align-center">
+    <h2>I love cats</h2>
+    <p>
+      I currently have two lovely cats, my eldest
+      <span class="pink-text">Cat</span> and my youngest
+      <span class="blue-text">Unagi</span>.
+    </p>
+  </div>
+</div>
+<div class="flex justify-center">
+  <div class="flex" *ngFor="let cat of photos">
+    <app-card [assetPath]="'cats/cat' + (cat + 1) + '.jpg'"></app-card>
+  </div>
+</div>

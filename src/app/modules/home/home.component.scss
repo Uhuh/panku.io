@@ -38,6 +38,14 @@ p {
   max-width: 700px;
 }
 
+a {
+  transition: all 0.2s;
+}
+a:hover {
+  transition: all 0.2s;
+  color: var(--grey);
+}
+
 img {
   border-radius: 10px;
   height: clamp(150px, 100%, 300px);
