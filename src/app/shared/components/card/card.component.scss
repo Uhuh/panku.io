@@ -5,14 +5,26 @@
 
 .card-wrapper {
   border-radius: 10px;
+  height: fit-content;
   background-color: var(--grey);
 }
 
 img {
   border-radius: 10px;
-  height: 60vh;
-  @media (max-width: 600px) {
+  height: 40vh;
+  max-width: 100%;
+  @media (max-width: 1000px) {
     width: 100%;
     height: auto;
+  }
+}
+
+svg {
+  height: 32px;
+  width: 32px;
+  fill: var(--bg-color);
+  transition: all 0.2s;
+  &:hover {
+    fill: var(--blush);
   }
 }

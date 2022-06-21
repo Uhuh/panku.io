@@ -1,1 +1,42 @@
-<p>commissions works!</p>
+<div class="commissions-wrapper">
+  <div class="flex column mb-5 pb-5 header">
+    <div class="flex gap-10 space-between header-content">
+      <div class="description">
+        <h1 class="purple-text mt-0 mb-1">Say hi to Alphyx.</h1>
+        <div class="faded-text flex column">
+          <p class="my-1">
+            This is a character I made up with
+            <a class="blush-text" href="https://twitter.com/_Crunnchy"
+              >Crunchy</a
+            >
+            in 2017. She's kinda my "persona" online now.
+          </p>
+          <p class="my-1">
+            Alphyx is supposed to be a succubus, turns out they usually have
+            wings...
+          </p>
+          <p class="grey-text my-1">
+            I always ensure to ask the person I'm commissioning if I can post
+            and credit their art here. If you are on here and want to be
+            removed, please reach out to me at my
+            <a class="blush-text" href="https://twitter.com/PankuRS">twitter</a
+            >.
+          </p>
+          <p class="mt-1">
+            <span class="blush-text">[redacted]</span> means the artist is okay
+            with listing and doesn't want their name shown.
+            <sup>Or I forgot their name.</sup>
+          </p>
+        </div>
+      </div>
+      <img src="assets/images/alphyx_headshot.png" />
+    </div>
+  </div>
+</div>
+<div class="flex row justify-center">
+  <app-card
+    *ngFor="let data of commissions"
+    [assetNames]="data.assets"
+    [twitterName]="data.twitter"
+  ></app-card>
+</div>

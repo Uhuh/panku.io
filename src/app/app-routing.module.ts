@@ -22,6 +22,13 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/cat/cat.component.module').then((m) => m.CatModule),
   },
+  {
+    path: 'commissions',
+    loadChildren: () =>
+      import('./modules/commissions/commissions.component.module').then(
+        (m) => m.CommissionsModule
+      ),
+  },
 ];
 
 @NgModule({

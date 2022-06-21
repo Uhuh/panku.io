@@ -6,15 +6,15 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() assetPath?: string;
+  @Input() assetNames?: string[];
   @Input() twitterName?: string;
 
   constructor() {}
 
   ngOnInit(): void {}
 
-  get asset() {
-    return `assets/${this.assetPath}`;
+  get assets() {
+    return this.assetNames?.map((name) => `assets/${name}`);
   }
 
   get twitter() {

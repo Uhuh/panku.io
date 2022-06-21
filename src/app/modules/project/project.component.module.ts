@@ -6,9 +6,7 @@ import { ProjectComponent } from './project.component';
 @NgModule({
   declarations: [ProjectComponent],
   imports: [
-    RouterModule.forChild([
-      { path: '/project/:name', component: ProjectComponent },
-    ]),
+    RouterModule.forChild([{ path: '', component: ProjectComponent }]),
     RouterModule,
     CommonModule,
   ],

@@ -11,6 +11,8 @@
   --purple: #9046CF;
   --pink: #CC59D2;
 
+  --alphyx-icon: url("./assets/images/alphyx_headshot.png");
+
   font-size: 32px;
   font-family: 'Inconsolata', monospace;
 }
@@ -35,6 +37,23 @@ $colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey';
   .#{$color}-text {
     color: var(--#{$color});
   }
+}
+
+a {
+  color: var(--blush);
+
+  transition: all 0.2s;
+  &:hover {
+    color: var(--blue);
+  }
+}
+
+h1 {
+  font-size: clamp(34px, 4vw, 62px);
+}
+
+p {
+  font-size: clamp(20px, 2vw, 24px);
 }
 
 .flex {

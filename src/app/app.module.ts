@@ -6,10 +6,9 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { NavbarModule } from './shared/components/navbar/navbar.component.module';
-import { CommissionsComponent } from './modules/commissions/commissions.component';
 
 @NgModule({
-  declarations: [AppComponent, CommissionsComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
