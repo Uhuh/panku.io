@@ -1,0 +1,29 @@
+<div class="flex column px-2 terminal-wrapper">
+  <div class="flex terminal-header">
+    <div class="flex align-center">
+      <img class="terminal-icon" src="assets/images/panku-icon.png" />
+      <span class="pl-2">panku@kraken:~</span>
+    </div>
+    <div></div>
+  </div>
+  <div class="flex column terminal-body">
+    <div class="p-1">
+      <div *ngFor="let command of commands">
+        <app-timestamp></app-timestamp>
+        <div>
+          <p class="pl-1">$ {{ command.command }}</p>
+          <p
+            *ngFor="let output of command.outputs"
+            class="{{ output.cssClass }}"
+          >
+            {{ output.content }}
+          </p>
+        </div>
+      </div>
+      <app-timestamp></app-timestamp>
+      <div>
+        <p class="flex pl-1 cursor gap-1">$</p>
+      </div>
+    </div>
+  </div>
+</div>

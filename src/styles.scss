@@ -8,6 +8,8 @@
   --faded: #fff2ff75;
   --blush: #EE8190;
   --blue: #A8E0FF;
+  --terminal-blue: #11308E;
+  --terminal-red: #a93534;
   --purple: #9046CF;
   --pink: #CC59D2;
 
@@ -31,11 +33,17 @@ body, html {
   background-color: var(--bg-color);
 }
 
-$colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey';
+$colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey', 'terminal-red', 'terminal-blue';
 
 @each $color in $colors {
   .#{$color}-text {
     color: var(--#{$color});
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
   }
 }
 
@@ -110,11 +118,11 @@ p {
 }
 
 .my-auto {
-  margin: 0 auto;
+  margin: auto 0;
 }
 
 .mx-auto {
-  margin: auto 0;
+  margin: 0 auto;
 }
 
 .m-auto {
