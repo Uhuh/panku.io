@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ErrorComponent } from './modules/error/error.component';
 
 const routes: Routes = [
   {
@@ -28,6 +29,10 @@ const routes: Routes = [
       import('./modules/commissions/commissions.component.module').then(
         (m) => m.CommissionsModule
       ),
+  },
+  {
+    path: '**',
+    component: ErrorComponent,
   },
 ];
 

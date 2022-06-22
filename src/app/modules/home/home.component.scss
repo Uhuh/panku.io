@@ -3,10 +3,13 @@
   width: 100%;
   height: 100%;
 
-  padding: 30px;
   @media (max-width: 600px) {
     padding-top: 0;
   }
+}
+
+.about-me {
+  padding: 30px;
 }
 
 .home-wrapper {
