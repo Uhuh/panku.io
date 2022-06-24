@@ -29,10 +29,16 @@ const routes: Routes = [
       import('./modules/commissions/commissions.component.module').then(
         (m) => m.CommissionsModule
       ),
+    data: {
+      title: 'Dylan Warren | Money Sink',
+    },
   },
   {
     path: '**',
     component: ErrorComponent,
+    data: {
+      title: 'Dylan Warren | Error',
+    },
   },
 ];
 
