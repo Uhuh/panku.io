@@ -19,7 +19,7 @@ export class CatComponent implements OnInit {
 
   shuffle() {
     for (let i = this.photos.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(Math.random() * (i + 1));
 
       [this.photos[i], this.photos[j]] = [this.photos[j], this.photos[i]];
     }
