@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 import { TerminalCommand } from 'src/app/shared/components/terminal/terminal.component';
 
 @Component({
@@ -42,7 +43,36 @@ export class HomeComponent implements OnInit {
     },
   ];
 
-  constructor() {}
+  constructor(private readonly meta: Meta) {
+    this.meta.addTags(
+      [
+        {
+          name: 'description',
+          content: 'Heyo! The names Dylan. I do cool front-end stuff.',
+        },
+        {
+          name: 'viewport',
+          content: 'width=device-width, intia-scale=1',
+        },
+        {
+          name: 'robots',
+          content: 'INDEX, FOLLOW',
+        },
+        { name: 'author', content: 'Dylan Warren' },
+        {
+          name: 'keywords',
+          content: 'Typescript, Angular, Panku, Fullstack',
+        },
+        {
+          property: 'og:title',
+          content: 'Dylan Warren | Home',
+        },
+        { property: 'og:type', content: 'website' },
+        { charset: 'UTF-8' },
+      ],
+      true
+    );
+  }
 
   ngOnInit(): void {}
 }

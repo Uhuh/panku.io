@@ -7,7 +7,13 @@ import { CommissionsComponent } from './commissions.component';
 @NgModule({
   declarations: [CommissionsComponent],
   imports: [
-    RouterModule.forChild([{ path: '', component: CommissionsComponent }]),
+    RouterModule.forChild([
+      {
+        path: '',
+        component: CommissionsComponent,
+        data: { title: 'Dylan Warren | Money Sink' },
+      },
+    ]),
     RouterModule,
     CardModule,
     CommonModule,

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-commissions',
@@ -27,7 +28,17 @@ export class CommissionsComponent implements OnInit {
     { assets: ['commissions/ganyuun.png'], twitter: 'ganyuun' },
     { assets: ['commissions/_Crunnchy.png'], twitter: '_Crunnchy' },
   ];
-  constructor() {}
+  constructor(private readonly meta: Meta) {
+    this.meta.addTags(
+      [
+        {
+          name: 'description',
+          content: 'This is my money sink.',
+        },
+      ],
+      true
+    );
+  }
 
   ngOnInit(): void {}
 }

@@ -19,6 +19,14 @@
   font-family: 'Inconsolata', monospace;
 }
 
+$colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey', 'terminal-red', 'terminal-blue';
+
+@each $color in $colors {
+  .#{$color}-text {
+    color: var(--#{$color});
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -33,13 +41,6 @@ body, html {
   background-color: var(--bg-color);
 }
 
-$colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey', 'terminal-red', 'terminal-blue';
-
-@each $color in $colors {
-  .#{$color}-text {
-    color: var(--#{$color});
-  }
-}
 
 @keyframes blink {
   0% {
