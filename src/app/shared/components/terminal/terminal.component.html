@@ -12,12 +12,13 @@
         <app-timestamp></app-timestamp>
         <div>
           <p class="pl-1">$ {{ command.command }}</p>
-          <p
-            *ngFor="let output of command.outputs"
-            class="{{ output.cssClass }}"
-          >
-            {{ output.content }}
-          </p>
+
+          <div *ngFor="let output of command.outputs" class="output">
+            <p class="main">{{ output.text }}</p>
+            <p class="indented" *ngFor="let child of output.children">
+              {{ child.text }}
+            </p>
+          </div>
         </div>
       </div>
       <app-timestamp></app-timestamp>

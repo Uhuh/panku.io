@@ -42,26 +42,33 @@ img {
   font-size: clamp(52px, 4vw, 72px);
 }
 
-.end-tree:before, .indent-end-tree:before, .tree-branch:before, .indent-tree-branch:before {
-  content: '├──';
+.main {
+  white-space: pre;
+  &:before {
+    padding: 0 8px;
+    content: '├──';
+  }
+
+  &:last-child {
+    &:before {
+      content: '└──';
+    }
+  }
+}
+
+.indented {
+  white-space: pre;
   padding-left: 8px;
-  width: 10px;
-  height: 10px;
+  &:before {
+    content: '│   ├──';
+  }
+
+  &:last-child {
+    &::before {
+      content: '│   └──';
+    }
+  }
 }
-
-.indent-tree-branch:before, .indent-end-tree:before {
-  content: '│     -     ├──';
-}
-
-.indent-end-tree:before {
-  content: '│     -     └──';
-
-}
-
-.end-tree:before {
-  content: '└──';
-}
-
 
 .cursor {
   align-items: flex-end;

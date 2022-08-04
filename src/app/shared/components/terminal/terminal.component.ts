@@ -1,13 +1,13 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-export interface OutputsOptions {
-  content: string;
-  cssClass?: string;
+export interface ITerminalNode {
+  text: string;
+  children?: ITerminalNode[];
 }
 
 export interface TerminalCommand {
   command: string;
-  outputs: OutputsOptions[];
+  outputs: ITerminalNode[];
 }
 
 @Component({

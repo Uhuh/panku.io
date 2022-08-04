@@ -11,22 +11,33 @@ export class HomeComponent implements OnInit {
     {
       command: 'panku.io --skills',
       outputs: [
-        { content: '' },
-        { content: 'typescript@4.6.0', cssClass: 'tree-branch' },
-        { content: 'angular@14', cssClass: 'indent-tree-branch' },
-        { content: 'node@17', cssClass: 'indent-tree-branch' },
-        { content: 'react', cssClass: 'indent-end-tree' },
-        { content: 'html5', cssClass: 'tree-branch' },
-        { content: 'css', cssClass: 'indent-tree-branch' },
-        { content: 'scss', cssClass: 'indent-end-tree' },
-        { content: 'databases', cssClass: 'tree-branch' },
-        { content: 'postgres', cssClass: 'indent-tree-branch' },
-        { content: 'mongodb', cssClass: 'indent-tree-branch' },
-        { content: 'ms-sql-server', cssClass: 'indent-end-tree' },
-        { content: 'version-control', cssClass: 'tree-branch' },
-        { content: 'git', cssClass: 'indent-tree-branch' },
-        { content: 'azure', cssClass: 'indent-end-tree' },
-        { content: 'runescape', cssClass: 'end-tree' },
+        {
+          text: 'typescript@4.6.0',
+          children: [
+            { text: 'angular@14' },
+            { text: 'node@17' },
+            { text: 'react' },
+          ],
+        },
+        {
+          text: 'html5',
+          children: [{ text: 'css' }, { text: 'scss' }],
+        },
+        {
+          text: 'databases',
+          children: [
+            { text: 'postgres' },
+            { text: 'mongodb' },
+            { text: 'ms-sql-server' },
+          ],
+        },
+        {
+          text: 'version-control',
+          children: [{ text: 'git' }, { text: 'azure' }],
+        },
+        {
+          text: 'runescape',
+        },
       ],
     },
   ];
