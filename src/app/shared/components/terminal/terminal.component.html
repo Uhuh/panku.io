@@ -21,9 +21,30 @@
           </div>
         </div>
       </div>
+      <div *ngFor="let command of userCommands">
+        <app-timestamp></app-timestamp>
+        <div>
+          <p class="pl-1">$ {{ command.command }}</p>
+
+          <div *ngFor="let output of command.outputs" class="output">
+            <p [ngClass]="{ main: command.indent }">{{ output.text }}</p>
+            <p
+              [ngClass]="{ indented: command.indent }"
+              *ngFor="let child of output.children"
+            >
+              {{ child.text }}
+            </p>
+          </div>
+        </div>
+      </div>
       <app-timestamp></app-timestamp>
-      <div>
-        <p class="flex pl-1 cursor gap-1">$</p>
+      <div class="flex">
+        $<input
+          class="flex pl-1 cursor gap-1"
+          autofocus
+          type="text"
+          (keyup.enter)="addInput($event)"
+        />
       </div>
     </div>
   </div>

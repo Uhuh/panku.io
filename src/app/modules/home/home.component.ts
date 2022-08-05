@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
-import { TerminalCommand } from 'src/app/shared/components/terminal/terminal.component';
+import { ITerminalCommand } from 'src/app/shared/components/terminal/terminal.component';
 
 @Component({
   selector: 'app-home',
@@ -8,9 +8,10 @@ import { TerminalCommand } from 'src/app/shared/components/terminal/terminal.com
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  commands: TerminalCommand[] = [
+  commands: ITerminalCommand[] = [
     {
       command: 'panku.io --skills',
+      indent: true,
       outputs: [
         {
           text: 'typescript@4.6.0',

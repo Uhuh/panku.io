@@ -29,7 +29,12 @@ img {
   font-size: clamp(16px, 2vw, 22px);
   color: var(--grey);
   font-weight: 700;
+
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: auto;
   min-height: 400px;
+  max-height: 500px;
 
   p {
     font-size: clamp(18px, 2vw, 20px);
@@ -82,4 +87,18 @@ img {
   display: inline-block;
   background-color: white;
   animation: blink 1s steps(2) infinite;
+}
+
+input {
+  width: 80%;
+  background: none;
+  color: var(--grey);
+  font: 0.8rem Inconsolata, monospace;
+  font-size: clamp(20px, 2vw, 22px);
+  border: none;
+  font-weight: 300;
+
+  &:focus {
+    outline: none;
+  }
 }
