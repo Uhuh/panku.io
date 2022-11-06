@@ -14,11 +14,12 @@ export class HomeComponent implements OnInit {
       indent: true,
       outputs: [
         {
-          text: 'typescript@4.6.0',
+          text: 'typescript@4.8.0',
           children: [
             { text: 'angular@14' },
-            { text: 'node@17' },
+            { text: 'node@18' },
             { text: 'react' },
+            { text: 'nextjs' },
           ],
         },
         {
@@ -75,5 +76,5 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

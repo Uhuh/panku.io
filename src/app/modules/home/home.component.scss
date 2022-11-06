@@ -8,8 +8,28 @@
   }
 }
 
+hr {
+  margin: 20%;
+  width: 100%;
+  color: var(--purple);
+}
+
+ul {
+  border-left: 2px solid white;
+}
+
+ul li {
+  list-style: none;
+}
+
 .about-me {
   padding: 30px;
+}
+
+.me {
+  @media(max-width: 900px) {
+    flex-direction: column;
+  }
 }
 
 .home-wrapper {

@@ -1,43 +1,62 @@
-<main class="flex home-wrapper w-full mx-auto">
+<main class="flex column home-wrapper w-full mx-auto">
   <section class="flex w-full space-between about-me">
-    <div class="flex column pt-2 gap">
-      <div class="flex column">
-        <h1 class="my-0 mb-2">
-          The name's <span class="purple-text">Dylan</span>.
-        </h1>
-        <p>
-          Heyo! I'm a full-stack<sup class="faded-text">TM</sup> developer for
-          <span class="blue-text">MiTek</span><sup class="faded-text">USA</sup>.
-        </p>
-        <p>
-          I currently work with <span class="blush-text">Angular13</span> and
-          <span class="blush-text">.Net6</span> creating microservices and pages
-          to deliver business management software.
-        </p>
-        <p>
-          I'm a huge <span class="blue-text">TypeScript</span> simp and love to
-          learn new web technologies. If I'm not spending my time on projects
-          I'm probably taking pictures of my cats.
-        </p>
-        <p>
-          Interested in another site I made? Checkout the site I made for my
-          Discord bot
-          <a href="https://rolebot.gg" class="blush-text">RoleBot</a>.
-        </p>
+    <div class="flex w-full column pt-2 gap">
+      <div class="flex w-full column">
+        <div class="flex w-full space-between me">
+          <div>
+            <h1 class="my-0 mb-2">
+              The name's <span class="purple-text">Dylan</span>.
+            </h1>
+            <p>
+              Heyo! I'm a full-stack<sup class="faded-text">TM</sup> developer
+              for <span class="blue-text">MiTek</span
+              ><sup class="faded-text">USA</sup>.
+            </p>
+            <p>
+              I currently work with
+              <span class="blush-text">Angular13</span> and
+              <span class="blush-text">.Net6</span> creating microservices and
+              pages to deliver business management software.
+            </p>
+            <p>
+              I'm a huge <span class="blue-text">TypeScript</span> simp and love
+              to learn new web technologies. If I'm not spending my time on
+              projects I'm probably taking pictures of my cats.
+            </p>
+          </div>
+          <div class="flex column">
+            <div class="sticky-avatar pt-4">
+              <img src="assets/images/me.jpg" alt="photo of me" />
+              <div class="flex">
+                <p>Dylan Warren <span class="faded-text">(That's me!)</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <strong> Wanna see what I've worked on? </strong>
+          <ul>
+            <li><a href="https://panku.io">This site!</a> - Angular</li>
+            <li>
+              <a href="https://rolebot.gg">RoleBot a Discord bot.</a> - Angular
+            </li>
+            <li>
+              <a href="https://couldyouplease.rip">Mori Calliope fansite.</a> -
+              Angular
+            </li>
+            <li><a href="https://yoki.gg">Yoki a Guilded bot.</a> - NextJS</li>
+            <li>
+              <a href="https://thefungalnetwork.com">Fungal network.</a> - CSS
+              tricks (flash warning)
+            </li>
+          </ul>
+        </div>
         <p>
           Want to contact me about a project or something I've done? Email me at
           <a class="blue-text" href="mailto:dylan@panku.io">dylan@panku.io</a>
         </p>
       </div>
       <app-socials></app-socials>
-    </div>
-    <div class="flex column">
-      <div class="sticky-avatar pt-4">
-        <img src="assets/images/me.jpg" alt="photo of me" />
-        <div class="flex">
-          <p>Dylan Warren <span class="faded-text">(That's me!)</span></p>
-        </div>
-      </div>
     </div>
   </section>
   <section class="pb-2">
