@@ -14,12 +14,19 @@ hr {
   color: var(--purple);
 }
 
+strong {
+  font-size: clamp(18px, 3vw, 28px);
+}
+
 ul {
   border-left: 2px solid white;
+  margin-top: 10px;
+  padding-left: clamp(20px, 4vw, 35px);
 }
 
 ul li {
   list-style: none;
+  font-size: clamp(16px, 4vw, 28px);
 }
 
 .about-me {
