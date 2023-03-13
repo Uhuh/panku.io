@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
         {
           text: 'typescript@4.8.0',
           children: [
-            { text: 'angular@14' },
+            { text: 'angular@15' },
             { text: 'node@18' },
             { text: 'react' },
             { text: 'nextjs' },
