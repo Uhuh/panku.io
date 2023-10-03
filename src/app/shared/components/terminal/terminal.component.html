@@ -1,7 +1,7 @@
 <div class="flex column px-2 terminal-wrapper">
   <div class="flex terminal-header">
     <div class="flex align-center">
-      <img class="terminal-icon" src="assets/images/panku-icon.png" />
+      <img class="terminal-icon" src="assets/images/panku-icon.png"/>
       <span class="pl-2">panku@kraken:~</span>
     </div>
     <div></div>
@@ -15,7 +15,7 @@
 
           <div *ngFor="let output of command.outputs" class="output">
             <p class="main">{{ output.text }}</p>
-            <p class="indented" *ngFor="let child of output.children">
+            <p *ngFor="let child of output.children" class="indented">
               {{ child.text }}
             </p>
           </div>
@@ -29,8 +29,8 @@
           <div *ngFor="let output of command.outputs" class="output">
             <p [ngClass]="{ main: command.indent }">{{ output.text }}</p>
             <p
-              [ngClass]="{ indented: command.indent }"
               *ngFor="let child of output.children"
+              [ngClass]="{ indented: command.indent }"
             >
               {{ child.text }}
             </p>
@@ -40,11 +40,11 @@
       <app-timestamp></app-timestamp>
       <div class="flex">
         $<input
-          class="flex pl-1 cursor gap-1"
-          autofocus
-          type="text"
-          (keyup.enter)="addInput($event)"
-        />
+        (keyup.enter)="addInput($event)"
+        autofocus
+        class="flex pl-1 cursor gap-1"
+        type="text"
+      />
       </div>
     </div>
   </div>

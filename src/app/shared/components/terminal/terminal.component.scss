@@ -49,6 +49,7 @@ img {
 
 .main {
   white-space: pre;
+
   &:before {
     padding: 0 8px;
     content: '├──';
@@ -64,6 +65,7 @@ img {
 .indented {
   white-space: pre;
   padding-left: 8px;
+
   &:before {
     content: '│   ├──';
   }
@@ -78,6 +80,7 @@ img {
 .cursor {
   align-items: flex-end;
 }
+
 .cursor:after {
   content: '';
   gap: 2px;

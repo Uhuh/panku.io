@@ -8,7 +8,7 @@ describe('CatComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [CatComponent],
+      imports: [CatComponent],
     }).compileComponents();
   });
 

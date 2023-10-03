@@ -8,9 +8,9 @@ describe('CommissionsComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CommissionsComponent ]
+      imports: [CommissionsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {

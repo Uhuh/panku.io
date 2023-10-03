@@ -8,9 +8,9 @@ describe('TerminalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TerminalComponent ]
+      imports: [TerminalComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TerminalComponent);
     component = fixture.componentInstance;

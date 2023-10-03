@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta } from '@angular/platform-browser';
+import { CardComponent } from '../../shared/components/card/card.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-commissions',
   templateUrl: './commissions.component.html',
   styleUrls: ['./commissions.component.scss'],
+  standalone: true,
+  imports: [NgFor, CardComponent],
 })
 export class CommissionsComponent implements OnInit {
   readonly commissions = [
@@ -28,6 +32,7 @@ export class CommissionsComponent implements OnInit {
     { assets: ['commissions/ganyuun.png'], twitter: 'ganyuun' },
     { assets: ['commissions/_Crunnchy.png'], twitter: '_Crunnchy' },
   ];
+
   constructor(private readonly meta: Meta) {
     this.meta.addTags(
       [
@@ -42,3 +47,5 @@ export class CommissionsComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+
+export default CommissionsComponent;

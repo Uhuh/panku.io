@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { TimestampComponent } from './timestamp/timestamp.component';
+import { NgClass, NgFor } from '@angular/common';
 
 export interface ITerminalNode {
   text: string;
@@ -16,6 +18,12 @@ export interface ITerminalCommand {
   selector: 'app-terminal',
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.scss'],
+  standalone: true,
+  imports: [
+    NgFor,
+    TimestampComponent,
+    NgClass,
+  ],
 })
 export class TerminalComponent implements OnInit {
   @Input() commands: ITerminalCommand[] = [];
@@ -81,9 +89,9 @@ export class TerminalComponent implements OnInit {
     },
   ];
 
-  failedCommand = (input: string) => `panku.io: command not found: ${input}`;
-
   constructor() {}
+
+  failedCommand = (input: string) => `panku.io: command not found: ${input}`;
 
   ngOnInit(): void {}
 

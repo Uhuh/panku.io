@@ -8,9 +8,9 @@ describe('TimestampComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TimestampComponent ]
+      imports: [TimestampComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(TimestampComponent);
     component = fixture.componentInstance;
