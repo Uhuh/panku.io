@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { interval } from 'rxjs';
+import { AsyncPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-error',
   standalone: true,
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss'],
+  imports: [
+    AsyncPipe,
+    DatePipe
+  ]
 })
 export class ErrorComponent {
-  pageEnter = new Date().toLocaleTimeString();
-  now$ = interval(1000);
   now = new Date().toLocaleTimeString();
-  route = '404';
+  route = this.router.url;
 
-  constructor(private readonly router: Router) {
-    this.route = this.router.url;
-  }
+  constructor(private readonly router: Router) {}
 }
 
 export default ErrorComponent;

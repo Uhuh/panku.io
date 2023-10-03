@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-timestamp',
@@ -6,10 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./timestamp.component.scss'],
   standalone: true,
 })
-export class TimestampComponent implements OnInit {
+export class TimestampComponent {
   now = new Date().toLocaleTimeString();
-
-  constructor() {}
-
-  ngOnInit(): void {}
 }
