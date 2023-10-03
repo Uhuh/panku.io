@@ -1,18 +1,7 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { TimestampComponent } from './timestamp/timestamp.component';
 import { NgClass, NgFor } from '@angular/common';
-
-export interface ITerminalNode {
-  text: string;
-  children?: ITerminalNode[];
-}
-
-export interface ITerminalCommand {
-  command: string;
-  indent?: boolean;
-  outputs: ITerminalNode[];
-  exec?: () => unknown;
-}
+import { ITerminalCommand } from './terminal.interfaces';
 
 @Component({
   selector: 'app-terminal',
@@ -25,8 +14,8 @@ export interface ITerminalCommand {
     NgClass,
   ],
 })
-export class TerminalComponent implements OnInit {
-  @Input() commands: ITerminalCommand[] = [];
+export class TerminalComponent {
+  @Input({ required: true }) commands: ITerminalCommand[] = [];
 
   userCommands: ITerminalCommand[] = [];
   private easterEggCommands: ITerminalCommand[] = [
@@ -89,11 +78,7 @@ export class TerminalComponent implements OnInit {
     },
   ];
 
-  constructor() {}
-
   failedCommand = (input: string) => `panku.io: command not found: ${input}`;
-
-  ngOnInit(): void {}
 
   addInput(input: any) {
     const text = input.target.value;

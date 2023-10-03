@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { ITerminalCommand } from 'src/app/shared/components/terminal/terminal.component';
 import { TerminalComponent } from '../../shared/components/terminal/terminal.component';
 import { SocialsComponent } from '../../shared/components/socials/socials.component';
+import { ITerminalCommand } from '../../shared/components/terminal/terminal.interfaces';
 
 @Component({
   selector: 'app-home',
