@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 
 @Component({
@@ -8,19 +8,15 @@ import { NgFor, NgIf } from '@angular/common';
   standalone: true,
   imports: [NgFor, NgIf],
 })
-export class CardComponent implements OnInit {
-  @Input() assetNames?: string[];
+export class CardComponent {
+  @Input({ required: true }) assetName!: string;
   @Input() twitterName?: string;
 
-  constructor() {}
-
-  get assets() {
-    return this.assetNames?.map((name) => `assets/${name}`);
+  get asset() {
+    return `assets/${this.assetName}`;
   }
 
   get twitter() {
     return `https://twitter.com/${this.twitterName}`;
   }
-
-  ngOnInit(): void {}
 }

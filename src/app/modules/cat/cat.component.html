@@ -10,6 +10,6 @@
 </div>
 <div class="flex flex-wrap justify-center">
   <div *ngFor="let cat of photos" class="flex">
-    <app-card [assetNames]="['cats/cat' + (cat + 1) + '.jpg']"></app-card>
+    <app-card [assetName]="'cats/cat' + (cat + 1) + '.jpg'"></app-card>
   </div>
 </div>

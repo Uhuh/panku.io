@@ -1,8 +1,6 @@
 <div class="flex column m-1 p-2 gap-2 card-wrapper">
   <div class="flex">
-    <div *ngFor="let asset of assets">
-      <img [src]="asset"/>
-    </div>
+    <img [src]="asset"/>
   </div>
   <div *ngIf="twitterName" class="flex justify-center">
     <a [href]="twitter" class="flex align-center gap-2 purple-text">

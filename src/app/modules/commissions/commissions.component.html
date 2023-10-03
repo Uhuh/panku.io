@@ -25,7 +25,6 @@
           <p class="mt-1">
             <span class="blush-text">[redacted]</span> means the artist is okay
             with listing and doesn't want their name shown.
-            <sup>Or I forgot their name.</sup>
           </p>
         </div>
       </div>
@@ -36,7 +35,7 @@
 <div class="flex flex-wrap row justify-center">
   <app-card
     *ngFor="let data of commissions"
-    [assetNames]="data.assets"
+    [assetName]="data.asset"
     [twitterName]="data.twitter"
   ></app-card>
 </div>
