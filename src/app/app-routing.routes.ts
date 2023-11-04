@@ -5,9 +5,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () => import('./modules/home/home.component'),
-    data: {
-      title: 'Dylan Warren | Home',
-    },
+    title: 'Dylan Warren | Home',
   },
   {
     path: 'project/:name',
@@ -15,20 +13,16 @@ export const routes: Routes = [
   },
   {
     path: 'cat',
-    loadComponent: () => import('./modules/cat/cat.component'),
+    loadChildren: () => import('./modules/cat/cat.routing'),
   },
   {
     path: 'commissions',
     loadComponent: () => import('./modules/commissions/commissions.component'),
-    data: {
-      title: 'Dylan Warren | Money Sink',
-    },
+    title: 'Dylan Warren | Money Sink',
   },
   {
     path: '**',
     component: ErrorComponent,
-    data: {
-      title: 'Dylan Warren | Error',
-    },
+    title: 'Dylan Warren | Error',
   },
 ];
