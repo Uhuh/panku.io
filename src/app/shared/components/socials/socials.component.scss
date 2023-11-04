@@ -1,14 +1,15 @@
-.gap {
+:host {
+  display: flex;
   gap: 20px;
 }
 
 svg {
   height: 32px;
   width: 32px;
-  fill: var(--grey);
+  fill: var(--text);
   transition: all 0.2s;
 
   &:hover {
-    fill: var(--faded);
+    fill: var(--text-inactive);
   }
 }
