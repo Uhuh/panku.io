@@ -1,13 +1,15 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/components/card/card.component';
 import { NgFor } from '@angular/common';
+import { ImageCardComponent } from '../../shared/components/image-card/image-card.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-cat',
   templateUrl: './cat.component.html',
   styleUrls: ['./cat.component.scss'],
   standalone: true,
-  imports: [NgFor, CardComponent],
+  imports: [NgFor, CardComponent, ImageCardComponent, RouterLink],
 })
 export class CatComponent {
   readonly photos = Array(21)

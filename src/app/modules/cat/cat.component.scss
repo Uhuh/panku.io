@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 30px;
+}
+
+.gap {
+  gap: 20px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
