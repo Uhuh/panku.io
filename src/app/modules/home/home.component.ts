@@ -2,32 +2,35 @@ import { Component } from '@angular/core';
 import { TerminalComponent } from '../../shared/components/terminal/terminal.component';
 import { SocialsComponent } from '../../shared/components/socials/socials.component';
 import { ITerminalCommand } from '../../shared/components/terminal/terminal.interfaces';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [SocialsComponent, TerminalComponent],
+  imports: [SocialsComponent, TerminalComponent, RouterLink],
 })
 export class HomeComponent {
   commands: ITerminalCommand[] = [
     {
-      command: 'panku.io --skills',
+      command: 'panku.dev --skills',
       indent: true,
       outputs: [
         {
-          text: 'typescript@5.1.0',
+          text: 'typescript@5.4.0',
           children: [
-            { text: 'angular@16' },
-            { text: 'node@18' },
-            { text: 'react' },
-            { text: 'nextjs' },
+            { text: 'angular@18' },
+            { text: 'node@20' },
           ],
         },
         {
           text: 'html5',
           children: [{ text: 'css' }, { text: 'scss' }],
+        },
+        {
+          text: 'systems',
+          children: [{ text: 'rust' }],
         },
         {
           text: 'databases',

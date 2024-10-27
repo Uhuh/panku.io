@@ -24,7 +24,7 @@ export class TerminalComponent {
       indent: false,
       outputs: [
         {
-          text: 'panku.io rolebot-dashboard RoleBot ZGlkIHlvdSByZWFsbHkgZGVjaWRlIHRvIGNoZWNrIHRoaXMgb3V0PyBMbWFv',
+          text: 'panku.dev rolebot-dashboard RoleBot ZGlkIHlvdSByZWFsbHkgZGVjaWRlIHRvIGNoZWNrIHRoaXMgb3V0PyBMbWFv',
         },
       ],
     },
@@ -78,7 +78,7 @@ export class TerminalComponent {
     },
   ];
 
-  failedCommand = (input: string) => `panku.io: command not found: ${input}`;
+  failedCommand = (input: string) => `panku.dev: command not found: ${input}`;
 
   addInput(input: any) {
     const text = input.target.value;

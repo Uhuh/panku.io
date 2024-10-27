@@ -10,5 +10,4 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
   imports: [NavbarComponent, RouterOutlet],
 })
 export class AppComponent {
-  title = 'panku.io';
 }
