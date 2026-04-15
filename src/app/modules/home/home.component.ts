@@ -14,23 +14,20 @@ import { RouterLink } from '@angular/router';
 export class HomeComponent {
   commands: ITerminalCommand[] = [
     {
-      command: 'panku.dev --skills',
+      command: 'dylanwarren.dev --skills',
       indent: true,
       outputs: [
         {
-          text: 'typescript@5.4.0',
+          text: 'web',
           children: [
-            { text: 'angular@18' },
-            { text: 'node@20' },
+            { text: 'typescript@5.4.0' },
+            { text: 'angular@21' },
+            { text: 'react@19' },
+            { text: 'node@24' },
+            { text: 'html5' },
+            { text: 'scss' },
+            { text: 'css' },
           ],
-        },
-        {
-          text: 'html5',
-          children: [{ text: 'css' }, { text: 'scss' }],
-        },
-        {
-          text: 'systems',
-          children: [{ text: 'rust' }],
         },
         {
           text: 'databases',
@@ -41,11 +38,11 @@ export class HomeComponent {
           ],
         },
         {
-          text: 'version-control',
-          children: [{ text: 'git' }, { text: 'azure' }],
-        },
-        {
           text: 'runescape',
+          children: [
+            { text: 'max-cape' },
+            { text: 'completionist-cape' },
+          ]
         },
       ],
     },
