@@ -12,37 +12,37 @@ export class CatService {
   get cat() {
     return this.http.get(this.bucketUrl + '?list-type=2&prefix=cat/', {
       headers: {
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       responseType: 'text',
     }).pipe(
       map(d => this.handleXMLToLinks(this.parser.parseFromString(d, 'text/xml'))),
       catchError(() => of({
         count: 0,
-        links: []
-      }))
+        links: [],
+      })),
     );
   }
 
   get unagi() {
     return this.http.get(this.bucketUrl + '?list-type=2&prefix=unagi/', {
       headers: {
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*',
       },
       responseType: 'text',
     }).pipe(
       map(d => this.handleXMLToLinks(this.parser.parseFromString(d, 'text/xml'))),
       catchError(() => of({
         count: 0,
-        links: []
-      }))
+        links: [],
+      })),
     );
   }
 
   private handleXMLToLinks(data: Document): ImageLinks {
     const { children } = data;
     const contents = Array.from(children[0].children);
-    console.log(contents)
+    console.log(contents);
 
     const count = contents.find(c => c.localName === 'KeyCount')?.textContent ?? '0';
     const images = contents.filter(c => c.localName === 'Contents');
@@ -51,7 +51,7 @@ export class CatService {
     images.shift();
 
     return {
-      links: images.map(i => this.bucketUrl + i.childNodes[0].textContent ?? ''),
+      links: images.map(i => this.bucketUrl + (i.childNodes[0].textContent ?? '')),
       count: parseInt(count),
     };
   }
