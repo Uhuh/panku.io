@@ -8,7 +8,6 @@ import { RouterLink } from '@angular/router';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  standalone: true,
   imports: [SocialsComponent, TerminalComponent, RouterLink],
 })
 export class HomeComponent {
@@ -42,7 +41,7 @@ export class HomeComponent {
           children: [
             { text: 'max-cape' },
             { text: 'completionist-cape' },
-          ]
+          ],
         },
       ],
     },

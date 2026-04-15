@@ -6,7 +6,6 @@ import { NgFor } from '@angular/common';
   selector: 'app-commissions',
   templateUrl: './commissions.component.html',
   styleUrls: ['./commissions.component.scss'],
-  standalone: true,
   imports: [NgFor, CardComponent],
 })
 export class CommissionsComponent {

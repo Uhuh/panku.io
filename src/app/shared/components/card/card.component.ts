@@ -1,12 +1,11 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import { NgClass, NgFor, NgIf } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  standalone: true,
-  imports: [NgFor, NgIf, NgClass],
+  imports: [NgIf, NgClass],
 })
 export class CardComponent {
   @Input() asset?: string;
@@ -16,11 +15,15 @@ export class CardComponent {
   loaded = false;
 
   @HostBinding('style.min-height') get loading() {
-    return this.loaded ? '' : '200px';
+    return this.loaded
+      ? ''
+      : '200px';
   }
 
   get url() {
-    return this.asset ? `assets/${this.asset}` : this.link;
+    return this.asset
+      ? `assets/${this.asset}`
+      : this.link;
   }
 
   get twitter() {

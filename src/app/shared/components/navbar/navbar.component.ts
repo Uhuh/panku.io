@@ -5,7 +5,7 @@ import { RouterLink } from '@angular/router';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  standalone: true,
   imports: [RouterLink],
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+}

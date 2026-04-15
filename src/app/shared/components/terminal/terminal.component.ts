@@ -7,7 +7,6 @@ import { ITerminalCommand } from './terminal.interfaces';
   selector: 'app-terminal',
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.scss'],
-  standalone: true,
   imports: [
     NgFor,
     TimestampComponent,
@@ -24,7 +23,7 @@ export class TerminalComponent {
       indent: false,
       outputs: [
         {
-          text: 'panku.dev rolebot-dashboard RoleBot ZGlkIHlvdSByZWFsbHkgZGVjaWRlIHRvIGNoZWNrIHRoaXMgb3V0PyBMbWFv',
+          text: 'dylanwarren.dev rolebot-dashboard RoleBot ZGlkIHlvdSByZWFsbHkgZGVjaWRlIHRvIGNoZWNrIHRoaXMgb3V0PyBMbWFv',
         },
       ],
     },
@@ -41,8 +40,8 @@ export class TerminalComponent {
         const pings = [0, 1, 2, 3, 4, 5].map(
           (i) =>
             `64 bytes from 8.8.8.8: icmp_seq=${i + 1} ttl=113 time=${Math.floor(
-              Math.random() * 256
-            )}.0 ms`
+              Math.random() * 256,
+            )}.0 ms`,
         );
 
         this.easterEggCommands[2].outputs.push({
@@ -63,7 +62,7 @@ export class TerminalComponent {
         pingInfo.map((p) =>
           this.easterEggCommands[2].outputs.push({
             text: p,
-          })
+          }),
         );
       },
       outputs: [
@@ -78,7 +77,7 @@ export class TerminalComponent {
     },
   ];
 
-  failedCommand = (input: string) => `panku.dev: command not found: ${input}`;
+  failedCommand = (input: string) => `dylanwarren.dev: command not found: ${input}`;
 
   addInput(input: any) {
     const text = input.target.value;

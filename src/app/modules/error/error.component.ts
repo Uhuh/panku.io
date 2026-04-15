@@ -1,22 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
-import { AsyncPipe, DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-error',
-  standalone: true,
   templateUrl: './error.component.html',
   styleUrls: ['./error.component.scss'],
-  imports: [
-    AsyncPipe,
-    DatePipe
-  ]
 })
 export class ErrorComponent {
-  now = new Date().toLocaleTimeString();
-  route = this.router.url;
-
-  constructor(private readonly router: Router) {}
+  readonly #router = inject(Router);
+  readonly now = new Date().toLocaleTimeString();
+  readonly route = this.#router.url;
 }
 
 export default ErrorComponent;
