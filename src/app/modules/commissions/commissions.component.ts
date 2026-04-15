@@ -1,12 +1,11 @@
 import { Component } from '@angular/core';
 import { CardComponent } from '../../shared/components/card/card.component';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-commissions',
   templateUrl: './commissions.component.html',
   styleUrls: ['./commissions.component.scss'],
-  imports: [NgFor, CardComponent],
+  imports: [CardComponent],
 })
 export class CommissionsComponent {
   readonly commissions = [

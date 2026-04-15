@@ -1,14 +1,18 @@
 <div class="flex column p-2 gap-2 card-wrapper" [ngClass]="{ loading: !loaded }">
   <div class="image-wrapper">
-    <div *ngIf="!loaded" class="loader">
-      <div class="spinner"></div>
-    </div>
+    @if (!loaded) {
+      <div class="loader">
+        <div class="spinner"></div>
+      </div>
+    }
     <img [src]="url" loading="lazy" (load)="onLoad($event)"/>
   </div>
-  <div *ngIf="twitterName" class="flex justify-center">
-    <a [href]="twitter" class="flex align-center gap-2 purple-text">
-      <img src="assets/twitter.svg"/>
-      {{ twitterName }}
-    </a>
-  </div>
+  @if (twitterName) {
+    <div class="flex justify-center">
+      <a [href]="twitter" class="flex align-center gap-2 purple-text">
+        <img src="assets/twitter.svg"/>
+        {{ twitterName }}
+      </a>
+    </div>
+  }
 </div>

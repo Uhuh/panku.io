@@ -1,1 +1,3 @@
-<app-card *ngFor="let link of (links$ | async) ?? []" [link]="link"/>
+@for (link of (links$ | async) ?? []; track link) {
+  <app-card [link]="link"/>
+}

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TimestampComponent } from './timestamp/timestamp.component';
-import { NgClass, NgFor } from '@angular/common';
+import { NgClass } from '@angular/common';
 import { ITerminalCommand } from './terminal.interfaces';
 
 @Component({
@@ -8,10 +8,9 @@ import { ITerminalCommand } from './terminal.interfaces';
   templateUrl: './terminal.component.html',
   styleUrls: ['./terminal.component.scss'],
   imports: [
-    NgFor,
     TimestampComponent,
-    NgClass,
-  ],
+    NgClass
+],
 })
 export class TerminalComponent {
   @Input({ required: true }) commands: ITerminalCommand[] = [];

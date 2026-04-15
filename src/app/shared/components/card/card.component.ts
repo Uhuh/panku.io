@@ -1,11 +1,11 @@
 import { Component, HostBinding, Input } from '@angular/core';
-import { NgClass, NgIf } from '@angular/common';
+import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss'],
-  imports: [NgIf, NgClass],
+  imports: [NgClass],
 })
 export class CardComponent {
   @Input() asset?: string;

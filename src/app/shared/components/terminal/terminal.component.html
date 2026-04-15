@@ -2,49 +2,57 @@
   <div class="flex terminal-header">
     <div class="flex align-center">
       <img class="terminal-icon" src="assets/images/panku-icon.png"/>
-      <span class="pl-2">panku&#64;kraken:~</span>
+      <span class="pl-2">dylan&#64;kraken:~</span>
     </div>
     <div></div>
   </div>
   <div class="flex column terminal-body">
     <div class="p-1">
-      <div *ngFor="let command of commands">
-        <app-timestamp></app-timestamp>
+      @for (command of commands; track command) {
         <div>
-          <p class="pl-1">$ {{ command.command }}</p>
-
-          <div *ngFor="let output of command.outputs" class="output">
-            <p class="main">{{ output.text }}</p>
-            <p *ngFor="let child of output.children" class="indented">
-              {{ child.text }}
-            </p>
+          <app-timestamp></app-timestamp>
+          <div>
+            <p class="pl-1">$ {{ command.command }}</p>
+            @for (output of command.outputs; track output) {
+              <div class="output">
+                <p class="main">{{ output.text }}</p>
+                @for (child of output.children; track child) {
+                  <p class="indented">
+                    {{ child.text }}
+                  </p>
+                }
+              </div>
+            }
           </div>
         </div>
-      </div>
-      <div *ngFor="let command of userCommands">
-        <app-timestamp></app-timestamp>
+      }
+      @for (command of userCommands; track command) {
         <div>
-          <p class="pl-1">$ {{ command.command }}</p>
-
-          <div *ngFor="let output of command.outputs" class="output">
-            <p [ngClass]="{ main: command.indent }">{{ output.text }}</p>
-            <p
-              *ngFor="let child of output.children"
-              [ngClass]="{ indented: command.indent }"
-            >
-              {{ child.text }}
-            </p>
+          <app-timestamp></app-timestamp>
+          <div>
+            <p class="pl-1">$ {{ command.command }}</p>
+            @for (output of command.outputs; track output) {
+              <div class="output">
+                <p [class.main]="command.indent">{{ output.text }}</p>
+                @for (child of output.children; track child) {
+                  <p [class.indented]="command.indent">
+                    {{ child.text }}
+                  </p>
+                }
+              </div>
+            }
           </div>
         </div>
-      </div>
+      }
       <app-timestamp></app-timestamp>
       <div class="flex">
-        $<input
-        (keyup.enter)="addInput($event)"
-        autofocus
-        class="flex pl-1 cursor gap-1"
-        type="text"
-      />
+        $
+        <input
+          (keyup.enter)="addInput($event)"
+          autofocus
+          class="flex pl-1 cursor gap-1"
+          type="text"
+        />
       </div>
     </div>
   </div>
