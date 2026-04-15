@@ -8,7 +8,6 @@
   }
 }
 
-
 strong {
   font-size: clamp(18px, 3vw, 28px);
 }
@@ -29,7 +28,7 @@ ul li {
 
 .me {
   @media(max-width: 900px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -38,8 +37,22 @@ ul li {
 }
 
 .sticky-avatar {
-  position: sticky;
-  top: 0;
+  background-image: url("/assets/images/me.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 6px;
+  height: clamp(250px, 20vh, 400px);
+  width: clamp(250px, 20vw, 400px);
+  display: flex;
+  padding: 10px;
+
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+  font-size: clamp(14px, 3vw, 24px);
+
+  & > span {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: auto;
+  }
 }
 
 .gap {

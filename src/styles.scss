@@ -1,11 +1,11 @@
 @import './utils/spacings';
 
 :root {
-  --bg-color: #050718;
+  --bg-color: #0a0518;
   --main-text-color: rgb(255, 242, 255);
   --grey: rgba(255, 242, 255, 0.78);
   --faded: rgba(255, 242, 255, 0.46);
-  --blush: rgb(238, 129, 144);
+  --blush: #9e4af4;
   --terminal-blue: rgb(17, 48, 142);
   --terminal-red: rgb(169, 53, 52);
 
@@ -24,7 +24,7 @@
   --blue-60: rgba(168, 224, 255, 0.6);
   --blue-80: rgba(168, 224, 255, 0.8);
 
-  --purple: #ec22f8;
+  --purple: #9e4af4;
   --purple-10: rgba(144, 70, 207, 0.1);
   --purple-20: rgba(144, 70, 207, 0.2);
   --purple-60: rgba(144, 70, 207, 0.6);
@@ -32,10 +32,12 @@
 
   --pink: #CC59D2;
 
-  --alphyx-icon: url("./assets/images/alphyx_headshot.png");
-
   font-size: 20px;
   font-family: JetBrains Mono, monospace;
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+  }
 }
 
 $colors: 'blue', 'purple', 'pink', 'blush', 'faded', 'grey', 'terminal-red', 'terminal-blue';
@@ -64,7 +66,6 @@ body, html {
   color: var(--text);
   background-color: var(--bg-color);
 }
-
 
 @keyframes blink {
   0% {
